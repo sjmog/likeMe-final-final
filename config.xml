@@ -16,11 +16,10 @@
 	</author>
 
 	<icon src="icon.png" gap:role="default" />
-
+<gap:plugin name="ChildBrowser" version="~3" />
 
 	<preference name="target-device" value="tablet" />
 	<preference name="fullscreen" value="true" />
 	<preference name="webviewbounce" value="false" />
-	<preference name="stay-in-webview" value="true" />
 	<preference name="exit-on-suspend" value="false" />
 </widget>
