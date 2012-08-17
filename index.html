@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<script src="phonegap.js" type="text/javascript" charset="utf-8">
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<meta charset="UTF-8">
+<title>likeMe</title>
+</script>
+<script type="text/javascript">
+function attachToLike () {
+	var siteName = document.getElementById("url").value
+	var likeButton = document.getElementById("likebutton")
+likebutton.href="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2F" + siteName + "&send=false&layout=standard&width=450&show_faces=true&action=like&colorscheme=light&font&height=80"}
+var overlay = null;
+
+function moveUp () {
+	if ($("#overlaywrapper").css("top") === "0px") {
+			$("#overlaywrapper").animate({top:"-950px"})}
+	else {$("#overlaywrapper").animate({top:"0px"})};
+}
+
+function facebook () {
+	$("#facebookcontents").src = "www.google.com";
+	$("#facebookcontents").animate({top:"0px"});
+}
+$("#likebutton").click(facebook());
+</script>
+<style type="text/css">
+body {font-family:"Helvetica-Neue", Helvetica, sans-serif;
+font-weight:220;
+color:rgb(210,210,210);
+text-shadow: black 1px;
+font-style:oblique;
+}
+.wrapper {position:absolute;
+top:0px;
+left:0px;
+padding:0;
+margin:0;
+	height:1024px;
+width:768px;
+}
+#overlaywrapper {position:absolute;
+top:0px;
+left:0;
+padding:0;
+margin:0;
+height:1024px;
+width:768px;
+background-image:url(wooden%20planks.jpg);
+box-shadow:0px 5px 12px #000 ;
+}
+
+#url {
+	border-radius:2px;
+	text-align:center;
+}
+#url:focus {
+	box-shadow:#3CF inset 0px 1px 2px;
+}
+#footer {
+	position:absolute;
+	bottom:0px;
+	width:768px;
+}
+#infowrapper {
+	float:right;
+	height:32px;
+	width:32px;
+}
+.container {
+	position: relative;
+	top:50%;
+	width: 768px;
+	height:200px;
+	margin: -50% auto;
+	text-align: center;
+}
+.settingspage {
+	position:absolute;
+	width:768px;
+	height:1024px;
+	padding:0;
+	margin:0;
+	background-image:url(URL%20Grab.jpg);
+}
+.central {width:768px;
+height:1024px;
+margin:40% auto;
+text-align:center;
+}
+#buttonwrapper {
+	margin-top:30px;
+}
+.label {
+	width:300px;
+	padding:10px;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:justify !important;
+}
+.entry {
+	padding:10px;
+}
+#facebookpage {
+	top:100%;
+	height:1024px;
+	width:768px;
+}
+
+	</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="settingspage">
+            <div class="central">
+            <div class="label">
+                <label for="url">Enter your company web address below. This will be used to determine your unique link for the 'Like' button within the app.</label>
+            </div>
+            <div class="entry">
+                <input id="url" type="url" name="url" placeholder="www.example.com" width="300px" />
+            </div>
+                <div id="buttonwrapper">
+                <input type="button" value="Submit" onClick="attachToLike()" />
+                </div>
+            </div>
+        </div>
+        <div id="overlaywrapper">
+            <div class="container">
+            <!-- deprecated like <embed id="likebuttonembed" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.mysite.com&send=false&layout=standard&width=450&show_faces=true&action=like&colorscheme=light&font&height=80" width="400" height="400"></embed> -->
+            
+                <a id="likebutton" href="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.mysite.com&send=false&layout=standard&width=450&show_faces=true&action=like&colorscheme=light&font&height=80">Like</a>
+            </div>
+            
+            <div id="footer">
+            	<div id="infowrapper">
+            		<input type="image" id="infobutton" onClick="moveUp()" src="SvcIconInfo.png" name="infobutton" height="32px" width="32px" />
+            	</div>
+        	</div>
+        </div>
+        <div id="facebookpage">
+        <embed id="facebookcontents" src=# width="768" height="1024"> </embed>
+        </div>
+    </div>
+</body>
+</html>

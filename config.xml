@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.humanltd.likemefinal"
+	version 	= "1.0.0">
+
+	<name>likeMe</name>
+
+	<description>
+		An app to enable liking.
+	</description>
+
+	<author href="http://www.humanltd.com"
+		email="s_morgan@me.com">
+		Sam Morgan
+	</author>
+
+	<icon src="icon.png" gap:role="default" />
+
+
+	<preference name="target-device" value="tablet" />
+	<preference name="fullscreen" value="true" />
+	<preference name="webviewbounce" value="false" />
+	<preference name="stay-in-webview" value="true" />
+	<preference name="exit-on-suspend" value="false" />
+</widget>
